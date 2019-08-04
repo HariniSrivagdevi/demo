@@ -1,0 +1,105 @@
+<br><br>
+<h1>Search Form</h1>
+<form #searchForm ="ngForm" (ngSubmit)="search(searchForm.value)">
+         <input type="text" [(ngModel)]="this.pid" name="pid" ngModel>
+        <input type="submit" value="Submit" style="margin-left:16px">
+       </form>
+        <h1>Product List</h1>
+       <table border="1">
+        <tr>
+        <th>Id</th> <th>Name</th> <th>Price</th> <th>Category</th>
+        </tr>
+        <tr *ngFor="let e of products">
+        <td>{{e.pid}}</td>
+        <td>{{e.pname}}</td>
+        <td>{{e.pprice}}</td>
+        <td>{{e.pcategory}}</td>
+        </tr>
+       </table>
+<!-- <h1 align="left">Search Form</h1>
+<form align="left" #get="ngForm" (ngSubmit)="add(get.value)">
+ <input align ="left" type="text" />
+ 
+ <input   type ="button" style="margin-left: 16px" value="search"/>
+ <br><br>
+ <h1 align="left" >product List</h1>
+ <table align="left" border="3">
+<tr>
+    <td>Product Id:</td>
+    <td>Product name:</td>
+    <td>Product price:</td>
+    <td>Product Category:</td>
+
+</tr>
+
+
+ </table> -->
+    <!-- <table align="left" border="5">
+        <tr>
+            <td>Employee ID :</td>
+            <td><input type="text" name="eid" ngModel /></td>
+        </tr>
+        <tr>
+            <td>Employee Name :</td>
+            <td><input type="text"  name="ename" ngModel/></td>
+        </tr>
+        <tr>
+            <td>Gender :</td>
+            <td><input type="text"  name="gender" ngModel/></td>
+        </tr>
+        <tr>
+            <td>Employee Designation :</td>
+            <td><input type="text"  name="edesignation" ngModel/></td>
+        </tr>
+        <tr>
+            <td>Salary :</td>
+            <td><input type="text"  name="Salary" ngModel/></td>
+        </tr>
+        <tr>
+            <td>Employee Address :</td>
+            <td><input type="text"  name="eaddress" ngModel/></td>
+        </tr>
+        <tr>
+            <td>Employee Contact Number :</td>
+            <td><input type="text"  name="econtact" ngModel/></td>
+        </tr>
+    </table><br><br> -->
+        <!-- <input align ="left" type="submit" value="Add Employee"/>
+        <input type="text" value="" /> -->
+
+<!-- <form align="left" *ngIf="createdFlag;">
+    <h1>Succesfully Added!!!</h1>
+</form> -->
+
+<!--<form *ngIf="createdFlag;">
+    <table align="center" border="1">
+        <tr>
+            <td>Employee ID :</td>
+            <td>{{createdEmployee.eid}}</td>
+        </tr>
+        <tr>
+            <td>Employee Name :</td>
+            <td>{{createdEmployee.ename}}</td>
+        </tr>
+        <tr>
+            <td>Gender :</td>
+            <td>{{createdEmployee.gender}}</td>
+        </tr>
+        <tr>
+            <td>Employee Designation :</td>
+            <td>{{createdEmployee.edesignation}}</td>
+        </tr>
+        <tr>
+            <td>Salary :</td>
+            <td>{{createdEmployee.Salary}}</td>
+        </tr>
+        <tr>
+            <td>Employee Address :</td>
+            <td>{{createdEmployee.eaddress}}</td>
+        </tr>
+        <tr>
+            <td>Employee Contact Number :</td>
+            <td>{{createdEmployee.econtact}}</td>
+        </tr>
+    </table>
+</form>-->

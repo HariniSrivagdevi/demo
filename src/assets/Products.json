@@ -1,0 +1,28 @@
+{
+    "products":[
+        {
+            "pid":"pO8",
+            "pname":"Samsung",
+            "pprice":"20000",
+            "pcategory":"mobile"
+        },
+        {
+            "pid":"pO4",
+            "pname":"Redmi",
+            "pprice":"15000",
+            "pcategory":"mobile"
+        },
+        {
+            "pid":"pO3",
+            "pname":"Dell",
+            "pprice":"40000",
+            "pcategory":"laptop"
+        },
+        {
+            "pid":"pO1",
+            "pname":"Apple",
+            "pprice":"80000",
+            "pcategory":"laptop"
+        }
+    ]
+}

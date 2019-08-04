@@ -1,0 +1,18 @@
+<br><br>
+<h1 align="center">Employee Details</h1>
+<table align="center" border="5">
+    <tr class="trow">
+        <td>Employee ID</td>
+        <td>Employee Name</td>
+        <td>Employee Salary</td>
+        <td>Employee Age</td>
+        <td>Profile Image</td>
+    </tr>
+    <tr *ngFor="let det of employees">
+        <td>{{det.id}}</td>
+        <td>{{det.employee_name}}</td>
+        <td>{{det.employee_salary}}</td>
+        <td>{{det.employee_age}}</td>
+        <td>{{det.profile_image}}</td>
+    </tr>
+</table>

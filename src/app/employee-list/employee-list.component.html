@@ -1,0 +1,41 @@
+<br><br>
+<h1 align="center">Products Details</h1>
+<table align="center" border="5">
+    <tr>
+        <td (click)="sort('pid')">Products ID</td>
+        <td (click)="sort('pname')">Products Name</td>
+        <td (click)="sort('pprice')">Price</td>
+        <td (click)="sort('pcategory')">Category</td>
+        
+        <td>Delete Operation</td>
+        <td>Update Operation</td>
+    </tr>
+    <tr *ngFor="let det of products | orderby:column:order">
+        <td>{{det.pid}}</td>
+        <td>{{det.pname}}</td>
+        <td>{{det.pprice}}</td>
+        <td>{{det.pcategory}}</td>
+        
+        <td><button (click)="delete(det.eid)" type="button">Delete</button></td>
+        <td><button (click)="updateData()" type="button">Update</button></td>
+    </tr>
+</table><br><br>
+<div align="center" *ngIf=!isUpdate>
+    <form #upd="ngForm" (ngSubmit)="update(upd.value)">
+        <table border="1">
+            <tr>
+                <td>Products ID</td>
+                <td>Products Name</td>
+                <td>Products Price</td>
+                <td>Products Category</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="pid" ngModel/></td>
+                <td><input type="text" name="pname" ngModel></td>
+                <td><input type="text" name="pprice" ngModel/></td>
+                <td><input type="text" name="pcategory" ngModel/></td>
+            </tr>
+        </table><br>
+        <input type="submit" value="Update"/>
+    </form>
+</div>
